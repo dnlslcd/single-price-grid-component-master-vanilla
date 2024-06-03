@@ -11,24 +11,124 @@
   <title>Frontend Mentor | Single Price Grid Component</title>
 
 <style>
+:root {
+    --primary: hsl(179, 62%, 43%);
+    --secondary: hsl(71, 73%, 54%);
+    --neutral1: hsl(204, 43%, 93%);
+    --neutral2: hsl(218, 22%, 67%);
+    --light-cyan: hsla(179, 62%, 43%, 0.699);
+  }
 
 html {
   font-size: 16px;
 }
   body {
-   font-family: "Karla", sans-serif;
-   display: grid;
-   margin: 10px;
-  }
+  font-family: "Karla", sans-serif;
+  background-color: var(--neutral1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
 
-  :root {
-    --primary: hsl(179, 62%, 43%);
-    --secondary: hsl(71, 73%, 54%);
-    --neutral1: hsl(204, 43%, 93%);
-    --neutral2: hsl(218, 22%, 67%);
-  }
+  
+.section {
+    margin: 1rem;
+    border-radius: 16px;
+}
+
+.section>div {
+    padding: 1rem;
+}
 
 
+.section-join {
+    background-color: white;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.section-join>* {
+    margin-top: 1rem;
+}
+
+.section-join__title {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.section-join__message {
+    color: var(--secondary);
+}
+
+.section-join__description {
+    color: var(--neutral2)
+}
+
+/** Monthly subscription */
+
+.section-subscription {
+    background-color: var(--primary);
+}
+
+.section-subscription__title {
+    color: white;
+}
+
+.plan-price {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.section-subscription__plan {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.plan-duration {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section-subscription__information {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1rem;
+
+}
+
+.section-subscription__signup {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-color: var(--secondary);
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    font-size: 700;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/** WhyUs*/
+
+.section-whyus {
+    background-color: var(--light-cyan);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.section-whyus__title {
+    color: white;
+}
+
+.section-whyus__benefits {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
 
 
 
@@ -49,7 +149,7 @@ html {
 <div class="section-subscription">
   <header class="section-subscription__title">Monthly Subscription</header>
 
-  <div class="section-subscription__price">&dollar;29 per month</div>
+  <div class="section-subscription__plan"><span class="plan-price">&dollar;29</span><span class="plan-duration">per month</span></div>
 
   <p class="section-subscription__information">Full access for less than &dollar;1 a day</p>
 
@@ -79,31 +179,4 @@ html {
 </html>
 
 
-<!-- <div>
-  <div class="section-join">
-    <h1 class="section-join__title">Join our community</h1>
-    <p class="section-join__message">30-day, hassle-free money back guarantee</p>
-    <p class="section-join__description">
-      Gain access to our full library of tutorials along with expert code reviews.
-      Perfect for any developers who are serious about honing their skills.
-    </p>
-  </div>
-  <div class="section-subscription">
-    <h2 class="section-subscription__title">Monthly Subscription</h2>
-    <div class="section-subscription__price">&dollar;29 per month</div>
-    <p class="section-subscription__information">Full access for less than &dollar;1 a day</p>
-    <a href="" class="section-subscription__signup">Sign Up</a>
-  </div>
-  <div class="section-whyus">
-    <h2 class="section-whyus__title">Why Us</h2>
-    <ul class="section-whyus__benefits">
-      <li>Tutorials by industry experts</li>
-      <li>Peer &amp; expert code review</li>
-      <li>Coding exercises</li>
-      <li>Access to our GitHub repos</li>
-      <li>Community forum</li>
-      <li>Flashcard decks</li>
-      <li>New videos every week</li>
-    </ul>
-  </div>
-</div> -->
+
